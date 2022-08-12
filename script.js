@@ -40,11 +40,11 @@ window.addEventListener("load", ()=>{
 
         switch(true) {/* se va a evaluar que no use numeros y otra cosa */
             case !$inputName.value.trim():  /* que no se coloquen espacios */
-                $nameErrors.innerHTML = "Requerido";
+                $nameErrors.innerHTML = "El nombre es requerido";
                 $inputName.classList.add("is-invalid");
                 break;
             case !regExAlpha.test($inputName.value):
-                $nameErrors.innerHTML = "Nombre invalido";
+                $nameErrors.innerHTML = "El nombre es invalido";
                 $inputName.classList.add("is-invalid");
                 break;
             default:
@@ -60,11 +60,11 @@ window.addEventListener("load", ()=>{
 
         switch(true) {/* se va a evaluar que no use numeros y otra cosa */
             case !$inputLastname.value.trim():  /* que no se coloquen espacios */
-                $lastnameErrors.innerHTML = "Requerido";
+                $lastnameErrors.innerHTML = "El apellido es requerido";
                 $inputLastname.classList.add("is-invalid");
                 break;
             case !regExAlpha.test($inputLastname.value):
-                $lastnameErrors.innerHTML = "Apellido invalido";
+                $lastnameErrors.innerHTML = "El apellido invalido";
                 $inputLastname.classList.add("is-invalid");
                 break;
             default:
@@ -79,11 +79,11 @@ window.addEventListener("load", ()=>{
 
         switch(true) {/* se va a evaluar que no use numeros y otra cosa */
             case !$dni.value.trim():  /* que no se coloquen espacios */
-                $dniErrors.innerHTML = "Requerido";
+                $dniErrors.innerHTML = "Su Dni es requerido";
                 $dni.classList.add("is-invalid");
                 break;
             case !regExDNI.test($dni.value):
-                $dniErrors.innerHTML = "DNI invalido";
+                $dniErrors.innerHTML = "el DNI es invalido";
                 $dni.classList.add("is-invalid");
                 break;
             default:
@@ -98,11 +98,11 @@ window.addEventListener("load", ()=>{
 
         switch(true) {/* se va a evaluar que no use numeros y otra cosa */
             case !$email.value.trim():  /* que no se coloquen espacios */
-                $emailErrors.innerHTML = "Requerido";
+                $emailErrors.innerHTML = "El email es requerido";
                 $email.classList.add("is-invalid");
                 break;
             case !regExEmail.test($email.value):
-                $emailErrors.innerHTML = "email invalido";
+                $emailErrors.innerHTML = "su email es invalido";
                 $email.classList.add("is-invalid");
                 break;
             default:
@@ -117,7 +117,7 @@ window.addEventListener("load", ()=>{
 
         switch(true) {
             case !$pass.value.trim(): 
-                $passErrors.innerHTML = "Requerido";
+                $passErrors.innerHTML = "Password requerido";
                 $pass.classList.add("is-invalid");
                 break;
             case !regExPass.test($pass.value):
@@ -135,7 +135,7 @@ window.addEventListener("load", ()=>{
     $pass.addEventListener('blur', function(){
         switch (true) {
             case !$pass.value.trim():
-                $passErrors.innerHTML = 'El campo contraseña es obligatorio'
+                $passErrors.innerHTML = 'El campo de la contraseña es obligatorio'
                 $pass.classList.add('is-invalid')
                 break;
             case !regExPass.test($pass.value):
@@ -173,7 +173,7 @@ window.addEventListener("load", ()=>{
 
         switch (true) {
             case !$fecha.value.trim():
-                $fechaErrors.innerHTML ="Requerido"
+                $fechaErrors.innerHTML ="La fecha es requerido"
                 $fecha.classList.add("is-invalid")
                 break;
             case moment($fecha.value) > moment() :
@@ -195,7 +195,7 @@ window.addEventListener("load", ()=>{
 
     $sexo.addEventListener('blur', function(){
         if(!$sexo.value.trim()){
-             $sexErrors.innerHTML = 'Campo requerido';
+             $sexErrors.innerHTML = 'Este campo es requerido';
              $sexo.classList.add('is-invalid')
          } else {
              $sexo.classList.remove('is-invalid');
@@ -302,11 +302,7 @@ window.addEventListener("load", ()=>{
 
     })
 
-
-
-   
-
-   
+ 
 
 
 })
